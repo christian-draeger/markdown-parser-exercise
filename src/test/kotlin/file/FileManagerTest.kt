@@ -35,7 +35,7 @@ class FileManagerTest {
             lines.
         """.trimIndent()
 
-        fileManager.write(name = "test", content = aMultilineString, isResource = false)
+        fileManager.write(name = "test", content = aMultilineString)
 
         assertTrue(File("test.html").readText().contains(aMultilineString))
     }
