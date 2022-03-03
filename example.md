@@ -1,4 +1,4 @@
-# example document from resources folder
+# example document from project root
 hello this is an example.
 we will try to parse this and convert it to html.
 
