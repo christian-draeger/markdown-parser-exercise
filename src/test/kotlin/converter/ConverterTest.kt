@@ -2,6 +2,8 @@ package converter
 
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
+import strikt.api.expectThat
+import strikt.assertions.contains
 
 class ConverterTest {
 
@@ -22,7 +24,7 @@ class ConverterTest {
 
     @Test
     fun `can convert h1`() {
-        assertTrue(converter.toHtml(testData).contains("<h1>a h1</h1>"))
+        expectThat(converter.toHtml(testData)).contains("<h1>a h1</h1>")
     }
 
     @Test

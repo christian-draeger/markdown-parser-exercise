@@ -1,18 +1,21 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("jvm") version "1.5.10"
+    kotlin("jvm") version "1.6.0"
     application
+    id("com.github.johnrengelman.shadow") version "7.1.2"
+    // id("org.mikeneck.graalvm-native-image") version "1.4.1"
 }
 
 group = "codes.draeger"
-version = "1.0-SNAPSHOT"
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
+    implementation("com.github.ajalt.clikt:clikt:3.4.0")
+    testImplementation("io.strikt:strikt-core:0.34.0")
     testImplementation(kotlin("test"))
 }
 

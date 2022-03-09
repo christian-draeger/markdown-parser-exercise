@@ -3,6 +3,13 @@ package file
 import java.io.File
 import java.io.IOException
 
+fun File.readMd(): List<String> {
+    if (extension != "md") {
+        throw InvalidFileFormatException()
+    }
+    return readText().lines()
+}
+
 class FileManager {
     fun read(name: String, isResource: Boolean = true): List<String> {
         if (!name.endsWith(".md")) {

@@ -1,5 +1,7 @@
 package converter
 
+fun List<String>.convertToHtml() = Converter().toHtml(this)
+
 class Converter {
     fun toHtml(markdownLines: List<String>): String {
         return markdownLines.joinToString(transform = ::lineConverter, separator = "\n")
